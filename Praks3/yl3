@@ -1,0 +1,11 @@
+#!/bin/bash
+# meelde tuletus fixida pisivead
+echo -n "Sisesta ainepunktide arv: "
+read ainep
+echo -n "Sisesta nädalate arv: "
+read nadal
+#
+arvutus=`echo $ainep*26 | bc`
+arvutus2=`echo "scale=1;$arvutus/$nadal" | bc`
+ymarda="`echo "($arvutus2+0.9)/1" | bc`"
+echo "Ühe nädala eeldatav ajakulu on $ymarda tundi."

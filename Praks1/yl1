@@ -4,3 +4,4 @@ echo -n "My current directory is:"
 pwd
 echo -n "The user logged in is:"
 whoami
+ 

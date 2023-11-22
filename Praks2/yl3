@@ -1,0 +1,9 @@
+#!/bin/bash
+# See on kalendri kui ka kellaja kood
+kalender=`date +"%B %Y kalender"`
+kalender="${kalender^}"
+date +"Täna on %A, %d %B, %Y"
+date +"Kell on %H:%M"
+echo
+echo $kalender
+cal | tail -n 7

@@ -1,0 +1,17 @@
+#!/bin/bash
+#Kysin inimeste arvu kogust
+echo -n "Sisestage reisijate arv: "
+read reisijad
+#Kysin kohtade arvu bussis
+echo -n "Sisestage kohtade arv bussis: "
+read kohad
+#Jagan  reisijate arvu bussis olevate kohtade arvuga
+bussid=$(($reisijad / $kohad))
+ylejaanud=$(($reisijad % $kohad))
+if test $ylejaanud -gt 0
+then
+	bussid=$(($bussid + 1))
+fi
+#tulemuse valjastamine
+echo "Kokku on vaja $bussid bussi"
+#siin loppeb skript

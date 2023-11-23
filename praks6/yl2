@@ -1,6 +1,6 @@
 #!/bin/bash
 #Paarisarvud - liida ainult paaris arvud
-echo -n "Sisesta suvaline täisarv: "
+echo -n "Sisesta suvaline taisarv: "
 read summa1
 arv=$summa1
 summa=0

@@ -1,0 +1,14 @@
+#!/bin/bash
+#Paarisarvud - liida ainult paaris arvud
+echo -n "Sisesta suvaline täisarv: "
+read summa1
+arv=$summa1
+summa=0
+while [ $summa1 -ne 0 ]
+do
+	jaak=$(($summa1 % 10))
+	summa=$(($summa + $jaak))
+	summa1=$(($summa1 / 10))
+done
+echo "Arvu $arv numbrite summa on $summa"
+#skripti lopp

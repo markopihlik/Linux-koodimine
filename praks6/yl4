@@ -1,0 +1,28 @@
+#!/bin/bash
+#Algarvu tuvastamine
+# echo -e "Sisesta suvaline arv: \c"
+# read arv
+#kontrollime
+on_algarv(){
+    if [ $1 -eq 0 -o $1 -eq 1 ]; then
+        echo "$1 - ei ole algarv"
+    else
+        jagaja=2
+        jaak=$(($1 % $jagaja))
+        while [ $jaak -ne 0 ] 
+        do
+            jagaja=$(($jagaja +1))
+            jaak=$(($1 % $jagaja))
+        done
+        if [ $1 -eq $jagaja ]; then
+            echo "$1 - on algarv"
+        else
+            echo "$1 - ei ole algarv"
+        fi
+    fi
+}
+echo "20 esimese taisarvu algarvulisuse kontroll:"
+for ((num=1; num<=20; num++)); do
+    result=$(on_algarv $num)
+    echo "$result"
+done
